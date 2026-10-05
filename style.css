@@ -1,0 +1,146 @@
+/* Common base styles for all genres */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e6e6e6, #f2f2f2);
+  color: #333;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-title h1 {
+  font-size: 2.6rem;
+  color: #2c3e50;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.movie {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.movie:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.movie img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.movie h2 {
+  font-size: 1.4rem;
+  margin: 12px 16px;
+  color: #e74c3c;
+}
+
+.movie-details {
+  display: none;
+  padding: 0 16px 16px;
+  color: #444;
+}
+
+.rating {
+  font-weight: bold;
+  color: #2980b9;
+}
+
+/* ----------- LOVE page specific styles ------------ */
+
+body.love {
+  background: linear-gradient(to right, #ffe6f0, #fff0f6);
+  color: #5a2a3a;
+}
+
+body.love header {
+  background: rgba(255, 192, 203, 0.9);
+  box-shadow: 0 3px 10px rgba(218, 112, 214, 0.3);
+}
+
+body.love .header-title h1 {
+  color: #b53360;
+  font-weight: 700;
+}
+
+body.love .header-title i {
+  color: #d1477f;
+  font-size: 32px;
+}
+
+body.love .movie {
+  background-color: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(209, 122, 158, 0.3);
+  border: 2px solid transparent;
+}
+
+body.love .movie:hover {
+  box-shadow: 0 10px 25px rgba(209, 122, 158, 0.5);
+  border-color: #d1477f;
+  transform: translateY(-6px);
+}
+
+body.love .movie img {
+  border-bottom: 2px solid #f5c6d0;
+  border-radius: 20px 20px 0 0;
+}
+
+body.love .movie h2 {
+  color: #b53360;
+  font-weight: 600;
+  margin: 14px 16px 6px;
+  font-size: 1.5rem;
+}
+
+body.love .movie-details {
+  color: #6f2c44;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0 16px 20px;
+}
+
+body.love .rating {
+  color: #a12751;
+  font-weight: 700;
+}
+
+/* ----------- Responsive (optional) ------------ */
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  .header-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .movie img {
+    height: 280px;
+  }
+}
